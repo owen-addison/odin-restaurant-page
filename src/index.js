@@ -2,21 +2,21 @@ import "./styles.css";
 import RestaurantImage from "./restaurant_image.jpeg";
 
 function content() {
-  const contentDiv = document.querySelector(".content");
+  const contentDiv = document.getElementById("content");
 
   // Create header div
-  const header = document.createElement("div");
-  header.classList.add("header");
+  const imageContainer = document.createElement("div");
+  imageContainer.classList.add("image-container");
 
   // Add the image to header
   const myImage = new Image();
   myImage.src = RestaurantImage;
   myImage.setAttribute("id", "main-image");
   myImage.setAttribute("alt", "restaurant-image");
-  header.appendChild(myImage);
+  imageContainer.appendChild(myImage);
 
   // Add header to content div
-  contentDiv.appendChild(header);
+  contentDiv.appendChild(imageContainer);
 
   // Create main content div
   const mainContentDiv = document.createElement("div");
