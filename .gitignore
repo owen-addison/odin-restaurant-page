@@ -58,4 +58,4 @@ Temporary Items
 ### Extra ###
 node_modules/
 logs/
-dist/
+# dist/
