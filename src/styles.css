@@ -51,6 +51,7 @@ body {
     justify-self: center;
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
+    text-align: center;
 }
 
 .image-container {
@@ -99,4 +100,6 @@ body {
 
 .contact-container {
     width: var(--content-width);
+    display: grid;
+    grid-template-columns: 20% 80%;
 }
