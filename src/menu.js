@@ -5,11 +5,20 @@ const menuContent = () => {
   const menuContainer = document.createElement("div");
   menuContainer.classList.add("menu-container", "menu");
 
+  // Add menu heading
+  const headerSection = document.createElement("div");
+  headerSection.classList.add("menu-section");
+  const menuHeading = document.createElement("h1");
+  menuHeading.classList.add("title");
+  menuHeading.textContent = "Menu";
+  headerSection.appendChild(menuHeading);
+  menuContainer.appendChild(headerSection);
+
   /* STARTERS */
   // Starters section with heading
   const startersSection = document.createElement("div");
   startersSection.classList.add("menu-section");
-  const startersHeading = document.createElement("h2");
+  const startersHeading = document.createElement("h3");
   startersHeading.classList.add("menu-heading");
   startersHeading.textContent = "Starters";
   startersSection.appendChild(startersHeading);
@@ -37,7 +46,7 @@ const menuContent = () => {
   // Entrees section with heading
   const entreesSection = document.createElement("div");
   entreesSection.classList.add("menu-section");
-  const entreesHeading = document.createElement("h2");
+  const entreesHeading = document.createElement("h3");
   entreesHeading.classList.add("menu-heading");
   entreesHeading.textContent = "Entrees";
   entreesSection.appendChild(entreesHeading);
@@ -65,7 +74,7 @@ const menuContent = () => {
   // Dessert section with heading
   const dessertSection = document.createElement("div");
   dessertSection.classList.add("menu-section");
-  const dessertHeading = document.createElement("h2");
+  const dessertHeading = document.createElement("h3");
   dessertHeading.classList.add("menu-heading");
   dessertHeading.textContent = "Desserts";
   dessertSection.appendChild(dessertHeading);
@@ -93,7 +102,7 @@ const menuContent = () => {
   // Drinks section with heading
   const drinksSection = document.createElement("div");
   drinksSection.classList.add("menu-section");
-  const drinksHeading = document.createElement("h2");
+  const drinksHeading = document.createElement("h3");
   drinksHeading.classList.add("menu-heading");
   drinksHeading.textContent = "Drinks";
   drinksSection.appendChild(drinksHeading);
