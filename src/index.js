@@ -15,6 +15,10 @@ const clearContent = () => {
   const newContent = document.createElement("div");
   newContent.setAttribute("id", "content");
   document.body.appendChild(newContent);
+  const activeTab = document.querySelector(".active");
+  if (activeTab !== null) {
+    activeTab.classList.remove("active");
+  }
 };
 
 // Add header element top page
@@ -25,17 +29,21 @@ header.setAttribute("id", "header");
 const tabContainer = document.createElement("div");
 tabContainer.classList.add("tab-container");
 const tabsArray = [
-  { name: "Home", module: homeContent },
-  { name: "Menu", module: menuContent },
-  { name: "Contact", module: contactContent },
+  { name: "Home", module: homeContent, default: true },
+  { name: "Menu", module: menuContent, default: false },
+  { name: "Contact", module: contactContent, default: false },
 ];
 tabsArray.forEach((element) => {
   const tab = document.createElement("button");
   tab.classList.add("tab");
+  if (element.default === true) {
+    tab.setAttribute("id", "default-open");
+  }
   tab.textContent = element.name;
-  tab.addEventListener("click", () => {
+  tab.addEventListener("click", (e) => {
     clearContent();
     element.module();
+    e.currentTarget.classList.add("active");
   });
   tabContainer.appendChild(tab);
 });
@@ -44,4 +52,4 @@ header.appendChild(tabContainer);
 // Append header to document body
 document.body.appendChild(header);
 
-homeContent();
+document.getElementById("default-open").click();
