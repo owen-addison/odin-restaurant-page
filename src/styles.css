@@ -11,13 +11,13 @@ body {
     margin: 0;
 }
 
-.content {
+#content {
     display: grid;
     justify-items: center;
     align-items: center;
 }
 
-.header {
+.image-container {
     display: grid;
     justify-content: center;
     align-items: center;
